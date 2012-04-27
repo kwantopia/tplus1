@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block body_content %}
+
+<div class="row">
+  <div class="span4">&nbsp;</div>
+  <div class="span4">
+    <form class="form-horizontal">
+      <fieldset>
+        <legend>Create Event</legend>
+        <div class="control-group">
+          <label class="control-label" for="input01">E-mail</label>
+          <div class="controls">
+            <input type="text" class="input-xlarge" id="input01">
+            <p class="help-block">Enter the e-mail you use to administer events</p>
+          </div>
+        </div>
+        <div class="control-group">
+          <label class="control-label" for="input01">Event name</label>
+          <div class="controls">
+            <input type="text" class="input-xlarge" id="input01">
+            <p class="help-block">Enter the event code</p>
+          </div>
+        </div>
+        <div class="form-actions">
+          <!-- <button type="submit" class="btn btn-primary">Create Event</a></button>-->
+          <a href="{% url event_configure %}" class="btn btn-large btn-primary">Create Event</a>
+        </div>
+      </fieldset>
+    </form>
+
+  </div>
+  <div class="span4">&nbsp;</div>
+</div>
+
+<div class="hero-unit">
+  <h1>Use T+1 to network...</h1>
+  <p>Faciliates speed networking</p>
+  <p>Video</p>
+</div>
+{% endblock body_content %}

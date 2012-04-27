@@ -1,0 +1,184 @@
+{% extends "base.html" %}
+
+{% block body_content %}
+<section id="details">
+  <div class="page-header">
+    <h1>Event Details
+    <small>Generates event code</small>
+    </h1>
+  </div>
+  <div class="row">
+    <div class="span12">
+      <div class="control-group">
+        <label class="control-label" for="input01">Event name</label>
+        <div class="controls">
+          <input type="text" class="input-xlarge" id="input01" placeholder="Bar Camp">
+          <p class="help-block">Please create an event name</p>
+        </div>
+      </div>
+      <div class="control-group">
+        <label class="control-label" for="input01">Event URL</label>
+        <div class="controls">
+          <input type="text" class="input-xlarge" id="input01">
+          <p class="help-block">Informational homepage for your event</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="topics">
+  <div class="page-header">
+    <h1>Event Discussion Topics
+    <small>Select topics of discussion</small>
+    </h1>
+  </div>
+  <div class="row">
+  </div>
+</section>
+
+<section id="durations">
+  <div class="page-header">
+    <h1>Speed Networking Duration
+    <small>Select the round durations</small>
+    </h1>
+  </div>
+  <div class="row">
+
+  </div>
+</section>
+
+<section id="invitees">
+  <div class="page-header">
+    <h1>Invitees
+    <small>Participant status</small>
+    </h1>
+  </div>
+  <div class="btn-group">
+    <button class="btn">Remind</button>
+    <button class="btn">Remove</button>
+    <button class="btn">Edit</button>
+  </div>
+  <div class="row">
+    <div class="span12">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Select</th>
+          <th>Email</th>
+          <th>Nick name</th>
+          <th>Survey completed</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <input type="checkbox">
+          </td>
+          <td>
+            <a href="mailto:sally.brooks@gmail.com">sally.brooks@gmail.com</a>
+          </td>
+          <td>
+            Sally B.
+          </td>
+          <td>
+            <i class="icon-ok"></i>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <input type="checkbox">
+          </td>
+          <td>
+            <a href="mailto:sally.brooks@gmail.com">sally.brooks@gmail.com</a>
+          </td>
+          <td>
+            Sally B.
+          </td>
+          <td>
+            <i class="icon-ok"></i>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <input type="checkbox">
+          </td>
+          <td>
+            <a href="mailto:sally.brooks@gmail.com">sally.brooks@gmail.com</a>
+          </td>
+          <td>
+            Sally B.
+          </td>
+          <td>
+            <i class="icon-ok"></i>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <input type="checkbox">
+          </td>
+          <td>
+            <a href="mailto:sally.brooks@gmail.com">sally.brooks@gmail.com</a>
+          </td>
+          <td>
+            Sally B.
+          </td>
+          <td>
+            <i class="icon-ok"></i>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <input type="checkbox">
+          </td>
+          <td>
+            <a href="mailto:sally.brooks@gmail.com">sally.brooks@gmail.com</a>
+          </td>
+          <td>
+            Sally B.
+          </td>
+          <td>
+            <i class="icon-ok"></i>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <input type="checkbox">
+          </td>
+          <td>
+            <a href="mailto:sally.brooks@gmail.com">sally.brooks@gmail.com</a>
+          </td>
+          <td>
+            Sally B.
+          </td>
+          <td>
+            <i class="icon-ok"></i>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <input type="checkbox">
+          </td>
+          <td>
+            <a href="mailto:sally.brooks@gmail.com">sally.brooks@gmail.com</a>
+          </td>
+          <td>
+            Sally B.
+          </td>
+          <td>
+            <i class="icon-ok"></i>
+          </td>
+        </tr>
+      </tbody>
+    </table> 
+    </div>
+
+  </div>
+</section>
+
+<div class="form-actions">
+  <!-- <button type="submit" class="btn btn-primary">Login</button> -->
+  <a href="{% url event_start %}" class="btn btn-large btn-primary">Event Start</a>
+</div>
+
+{% endblock body_content %}

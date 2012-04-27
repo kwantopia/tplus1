@@ -1,0 +1,147 @@
+{% extends "base.html" %}
+
+{% block body_content %}
+
+<p>
+</p>
+<p>
+</p>
+
+<section id="round_control">
+  <div class="page-header">
+    <h1>Control Panel</h1>
+  </div>
+  <div class="row">
+    <div class="span3">
+      Round 1
+    </div>
+    <div class="span3">
+      Round 2
+    </div>
+    <div class="span3">
+      Round 3
+    </div>
+    <div class="span3">
+      Round 4
+    </div>
+  </div>
+
+  <div class="progress">
+    <div class="bar"
+         style="width: 60%;"></div>
+  </div>
+
+  <div class="row">
+    <div class="span2">
+      &nbsp;
+    </div>
+    <div class="span2">
+      <a href="{% url start_round %}" class="btn btn-large btn-primary">Start Round</a>
+    </div>
+    <div class="span2">
+      <a href="{% url pause_round %}" class="btn btn-large btn-primary">Pause Round</a>
+    </div>
+    <div class="span2">
+      <a href="{% url end_round %}" class="btn btn-large btn-primary">End Round</a>
+    </div>
+    <div class="span2">
+      <a href="{% url restart_round %}" class="btn btn-large btn-primary">Restart Round</a>
+    </div>
+    <div class="span2">
+      &nbsp;
+    </div>
+  </div>
+</section>
+
+<section id="participants">
+  <div class="page-header">
+    <h1>Participants</h1>
+  </div>
+  <div class="row">
+    <div class="span12">
+      <table class="table">
+        <thead>
+          <tr>
+            <th colspan="2">Round 1</th>
+            <th colspan="2">Round 2</th>
+            <th colspan="2">Round 3</th>
+            <th colspan="2">Round 4</th>
+          </tr>
+          <tr>
+            <th>Nickname</th>
+            <th>Table</th>
+            <th>Nickname</th>
+            <th>Table</th>
+            <th>Nickname</th>
+            <th>Table</th>
+            <th>Nickname</th>
+            <th>Table</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Luca S.</td>
+            <td>4</td>
+            <td>Luca S.</td>
+            <td>4</td>
+            <td>Luca S.</td>
+            <td>4</td>
+            <td>Luca S.</td>
+            <td>4</td>
+          </tr>
+          <tr>
+            <td>Luca S.</td>
+            <td>4</td>
+            <td>Luca S.</td>
+            <td>4</td>
+            <td>Luca S.</td>
+            <td>4</td>
+            <td>Luca S.</td>
+            <td>4</td>
+          </tr>
+          <tr>
+            <td>Luca S.</td>
+            <td>4</td>
+            <td>Luca S.</td>
+            <td>4</td>
+            <td>Luca S.</td>
+            <td>4</td>
+            <td>Luca S.</td>
+            <td>4</td>
+          </tr>
+          <tr>
+            <td>Luca S.</td>
+            <td>4</td>
+            <td>Luca S.</td>
+            <td>4</td>
+            <td>Luca S.</td>
+            <td>4</td>
+            <td>Luca S.</td>
+            <td>4</td>
+          </tr>
+          <tr>
+            <td>Luca S.</td>
+            <td>4</td>
+            <td>Luca S.</td>
+            <td>4</td>
+            <td>Luca S.</td>
+            <td>4</td>
+            <td>Luca S.</td>
+            <td>4</td>
+          </tr>
+          <tr>
+            <td>Luca S.</td>
+            <td>4</td>
+            <td>Luca S.</td>
+            <td>4</td>
+            <td>Luca S.</td>
+            <td>4</td>
+            <td>Luca S.</td>
+            <td>4</td>
+          </tr>
+        </tbody>
+      </table> 
+    </div> <!-- span12 -->
+  </div> <!-- row -->
+</section>
+{% endblock body_content %}

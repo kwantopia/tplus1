@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>T+1 Networking</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="{{ STATIC_URL }}bootstrap/css/bootstrap.css" rel="stylesheet">
+    <style type="text/css">
+      body {
+        padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+      }
+      section {
+        padding-top: 60px;
+      }
+    </style>
+    <link href="{{ STATIC_URL }}bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="{{ STATIC_URL }}bootstrap/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ STATIC_URL }}bootstrap/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{ STATIC_URL }}bootstrap/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{ STATIC_URL }}bootstrap/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="{{ STATIC_URL }}bootstrap/ico/apple-touch-icon-57-precomposed.png">
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="{% url home %}">T+1</a>
+          <div class="nav-collapse">
+            <ul class="nav">
+              <li class="active"><a href="{% url home %}">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div><!--/.nav-collapse -->
+          {% if login %}
+          <div class="btn-group pull-right">
+            <button class="btn dropdown-toggle" data-toggle="dropdown">
+              <i class="icon-user"></i>
+                {{ user_email }}
+              <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu">
+              <li>
+                <a href="{% url event_configure %}">Configure</a>
+              </li>
+              <li class="divider"></li>
+              <li>
+                <a href="{% url home %}">Logout</a>
+              </li>
+            </ul>
+          </div>
+          {% else %}
+          <div class="btn-group pull-right">
+              <a href="{% url event_login %}" class="btn btn-primary">Login</a>
+          </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      {% block body_content %}
+
+      <h1>Bootstrap starter template</h1>
+      <p>Use this document as a way to quick start any new project.<br> All you get is this message and a barebones HTML document.</p>
+
+      {% endblock body_content %}
+    </div> <!-- /container -->
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="{{ STATIC_URL }}bootstrap/js/jquery.js"></script>
+    <script src="{{ STATIC_URL }}bootstrap/js/bootstrap-transition.js"></script>
+    <script src="{{ STATIC_URL }}bootstrap/js/bootstrap-alert.js"></script>
+    <script src="{{ STATIC_URL }}bootstrap/js/bootstrap-modal.js"></script>
+    <script src="{{ STATIC_URL }}bootstrap/js/bootstrap-dropdown.js"></script>
+    <script src="{{ STATIC_URL }}bootstrap/js/bootstrap-scrollspy.js"></script>
+    <script src="{{ STATIC_URL }}bootstrap/js/bootstrap-tab.js"></script>
+    <script src="{{ STATIC_URL }}bootstrap/js/bootstrap-tooltip.js"></script>
+    <script src="{{ STATIC_URL }}bootstrap/js/bootstrap-popover.js"></script>
+    <script src="{{ STATIC_URL }}bootstrap/js/bootstrap-button.js"></script>
+    <script src="{{ STATIC_URL }}bootstrap/js/bootstrap-collapse.js"></script>
+    <script src="{{ STATIC_URL }}bootstrap/js/bootstrap-carousel.js"></script>
+    <script src="{{ STATIC_URL }}bootstrap/js/bootstrap-typeahead.js"></script>
+
+  </body>
+</html>
+
