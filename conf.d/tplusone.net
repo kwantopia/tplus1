@@ -13,8 +13,10 @@
 	WSGIScriptAlias / /home/www/tplusone.net/joinlite/joinlite/wsgi.py
 
 	<Directory /home/www/tplusone.net/joinlite/joinlite>
+	    <Files wsgi.py>
 		Order deny,allow
 		Allow from all
+	    </Files>
 	</Directory>
 
 	# Logfiles

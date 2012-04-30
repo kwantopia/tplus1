@@ -29,3 +29,6 @@ pip-log.txt
 # log files
 access.log
 error.log
+
+# where static files are collected
+sitestatic

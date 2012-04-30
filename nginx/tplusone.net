@@ -11,8 +11,8 @@ server {
     access_log /home/www/tplusone.net/nginx/logs/access.log;
     error_log /home/www/tplusone.net/nginx/logs/error.log;
 
-    location /site_media/ {
-	root /home/www/tplusone.net/joinlite/site_media/;
+    location /static/ {
+	alias /home/www/tplusone.net/joinlite/sitestatic/;
     }
 
     location /downloads {
