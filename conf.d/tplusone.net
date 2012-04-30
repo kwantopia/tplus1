@@ -1,0 +1,24 @@
+<VirtualHost 127.0.0.1:8089>
+	ServerAdmin dawei@media.mit.edu
+	ServerName  tplusone.net
+	ServerAlias tplusone.net 
+	
+	# Indexes + Directory Root.
+	DirectoryIndex index.html
+	DocumentRoot /home/www/tplusone.net/htdocs/
+
+	WSGIDaemonProcess tplusone-net python-path=/home/virtualenv/tplusenv/lib/python2.6/site-packages
+	WSGIProcessGroup tplusone-net
+
+	WSGIScriptAlias / /home/www/tplusone.net/joinlite/joinlite/wsgi.py
+
+	<Directory /home/www/tplusone.net/joinlite/joinlite>
+		Order deny,allow
+		Allow from all
+	</Directory>
+
+	# Logfiles
+	ErrorLog  /home/www/tplusone.net/logs/error.log
+	CustomLog /home/www/tplusone.net/logs/access.log combined
+</VirtualHost>
+

@@ -1,0 +1,30 @@
+#server {
+#    listen 80; 
+#    server_name tplusone.net;
+#    #rewrite ^/(.*) http://tplusone.net/$1 permanent;
+#}
+
+server {
+    listen 80;
+    server_name tplusone.net;
+
+    access_log /home/www/tplusone.net/nginx/logs/access.log;
+    error_log /home/www/tplusone.net/nginx/logs/error.log;
+
+    location /site_media/ {
+	root /home/www/tplusone.net/joinlite/site_media/;
+    }
+
+    location /downloads {
+        root /home/www/tplusone.net/htdocs/downloads/;
+        index index.html;
+    }
+
+    location / {
+        #root /home/www/tplusone.net/htdocs/;
+        #index index.html;
+        proxy_pass http://127.0.0.1:8089/;
+        include /etc/nginx/proxy.conf;
+    }
+
+}
