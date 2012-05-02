@@ -1,0 +1,15 @@
+body {
+  padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+}
+
+section {
+  padding-top: 60px;
+}
+
+.docs-input-sizes select {
+  margin-bottom: 9px;
+}
+
+.timeline {
+  margin-top: 50px;
+}

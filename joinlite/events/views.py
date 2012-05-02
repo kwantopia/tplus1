@@ -11,6 +11,42 @@ def home(request):
 def configure(request):
   data = {}
 
+  data["topics"] = [{
+                      "title": "Round 1 Topic",
+                      "questions": ["Technology",
+                                    "Health",
+                                    "Entrepreneurship",
+                                    "Management"]
+                    },
+                    {
+                      "title": "Round 2 Topic",
+                      "questions": ["Family",
+                                    "Education",
+                                    "Elderly Care",
+                                    "Community Service",
+                                    "Retirement Plans"]
+                    },
+                    {
+                      "title": "Round 3 Topic",
+                      "questions": ["Travel",
+                                    "Sports",
+                                    "TV Shows",
+                                    "Ballet",
+                                    "Opera",
+                                    "Musical",
+                                    "Circus"]
+                    },
+                    {
+                      "title": "Round 4 Topic",
+                      "questions": ["Healthy Lifestyle",
+                                    "Food",
+                                    "Dessert",
+                                    "Restaurant",
+                                    "Fast Food",
+                                    "Exercise"]
+                    }]
+
+
   data["login"] = True
   data["user_email"] = "eventadmin@gmail.com"
 

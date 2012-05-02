@@ -11,6 +11,9 @@ urlpatterns = patterns('',
     url(r'^$', 'events.views.home', name='home'),
     # url(r'^joinlite/', include('joinlite.foo.urls')),
 
+    url(r'^about/$', 'main.views.about', name='about'),
+    url(r'^team/$', 'main.views.team', name='team'),
+
     # Uncomment the admin/doc line below to enable admin documentation:
     # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
 

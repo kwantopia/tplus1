@@ -23,6 +23,23 @@
           <p class="help-block">Informational homepage for your event</p>
         </div>
       </div>
+      <div class="control-group">
+        <label class="control-label" for="input01">Event Date</label>
+        <div class="controls">
+          <input type="text" class="input-xlarge" id="input01">
+        </div>
+        <label class="control-label" for="input01">Event Time</label>
+        <div class="controls">
+          <input type="text" class="input-xlarge" id="input01">
+          <select class="span1">
+            <option>AM</option>
+            <option>PM</option>
+          </select>
+        </div>
+        <div>
+          <p class="help-block">The date/time when the speed networking will start</p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -33,18 +50,62 @@
     <small>Select topics of discussion</small>
     </h1>
   </div>
+
   <div class="row">
+    <div class="span12"> 
+      <form class="form-horizontal">
+        <fieldset>
+          {% for t in topics %}
+          <div class="control-group">
+            <label class="control-label">{{t.title}}</label>
+            <div class="controls docs-input-sizes">
+              <select class="span8">
+                {% for q in t.questions %}
+                <option>{{q}}</option>
+                {% endfor %}
+              </select>
+            </div>
+          </div>
+          {% endfor %}
+
+          <div class="control-group">
+            <a class="btn btn-primary" href="#"><i class="icon-plus icon-white"></i> Add Round</a>
+          </div>
+        </fieldset>
+      </form>
+    </div>
   </div>
 </section>
 
-<section id="durations">
+<section id="duration">
   <div class="page-header">
-    <h1>Speed Networking Duration
-    <small>Select the round durations</small>
+    <h1>Event Duration 
+    <small>Select the time duration of each round</small>
     </h1>
   </div>
-  <div class="row">
 
+  <div class="row">
+    <div class="span12">
+      How long do you want each round to last for?  We recommend 5 minutes.
+    </div>
+    <div class="span12">
+      <form class="form-horizontal">
+        <fieldset>
+          <div class="span12">
+            &nbsp;
+          </div>
+          <div class="control-group">
+            <label class="control-label">Each round duration</label>
+            <div class="controls docs-input-sizes">
+              <input class="span1" type="text" placeholder="5"> minutes
+            </div>
+          </div>
+        </fieldset>
+      </form>
+    </div>
+    <div class="span12">
+      Total event duration will be approximately: <b>number of topics</b> <i class="icon-remove"></i> (<b>round duration</b> <i class="icon-plus"></i> <b>transition time [~3 mins]</b>)
+    </div>
   </div>
 </section>
 
