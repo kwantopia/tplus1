@@ -14,6 +14,19 @@ section {
   margin-top: 50px;
 }
 
+.create-event-screen {
+  margin-top: 40px;
+}
+
 .login-screen {
   margin-top: 100px;
+}
+
+.footer {
+  border-top: 1px solid #E5E5E5;
+}
+
+.footer-body {
+  padding-top: 20px;
+  padding-bottom: 20px;
 }

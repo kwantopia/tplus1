@@ -7,6 +7,8 @@ def about(request):
   """
     Show how to use T+1
   """
+  data = {}
+
   return render_to_response("main/about.html", data, context_instance=RequestContext(request))
 
 def team(request):

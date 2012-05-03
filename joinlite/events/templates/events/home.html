@@ -2,31 +2,30 @@
 
 {% block body_content %}
 
-<div class="login-screen">
+<div class="row">
+  <div class="span12">
+    <img width="120" src="{{ STATIC_URL }}imgs/Logo.png">
+  </div>
+</div>
+<div class="create-event-screen">
   <div class="row">
     <div class="span4">&nbsp;</div>
     <div class="span4">
       <form class="form-horizontal">
         <fieldset>
+          <center>
           <legend>Create Event</legend>
           <div class="control-group">
-            <label class="control-label" for="input01">E-mail</label>
-            <div class="controls">
-              <input type="text" class="input-xlarge" id="input01">
-              <p class="help-block">Enter the e-mail you use to administer events</p>
-            </div>
+              <input type="text" class="input-xlarge" id="input01" placeholder="E-mail">
           </div>
           <div class="control-group">
-            <label class="control-label" for="input01">Event name</label>
-            <div class="controls">
-              <input type="text" class="input-xlarge" id="input01">
-              <p class="help-block">Enter the event code</p>
-            </div>
+              <input type="text" class="input-xlarge" id="input01" placeholder="Enter the event name">
           </div>
-          <div class="form-actions">
+          <div class="form-actions" style="padding-left:0px;">
             <!-- <button type="submit" class="btn btn-primary">Create Event</a></button>-->
             <a href="{% url event_configure %}" class="btn btn-large btn-primary">Create Event</a>
           </div>
+        </center>
         </fieldset>
       </form>
 
@@ -43,5 +42,20 @@
   <p><a href="http://www.surveygizmo.com/s3/912160/t-1">Survey</a></p>
   <p></p>
   <p>Video</p>
+</div>
+
+<div class="row">
+  <div class="span12">
+    <center>
+    <img width="350" src="{{ STATIC_URL }}imgs/Deliberative_Democracy_Logo.png">
+    <img width="100" src="{{ STATIC_URL }}imgs/media_lab_logo.png">
+    <img width="300" src="{{ STATIC_URL }}imgs/IDEO_logo.png">
+    </center>
+  </div>
+</div>
+<div class="footer">
+  <div class="footer-body">
+ Copyright &copy; T+1 2012
+ </div>
 </div>
 {% endblock body_content %}
