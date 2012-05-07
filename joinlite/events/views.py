@@ -11,6 +11,8 @@ def home(request):
 def configure(request):
   data = {}
 
+  # TODO: Need to track people posting their e-mails and event names
+  
   data["topics"] = [{
                       "title": "Round 1 Topic",
                       "questions": ["Technology",
