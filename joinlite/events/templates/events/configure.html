@@ -10,34 +10,35 @@
   <div class="row">
     <div class="span12">
       <div class="control-group">
-        <label class="control-label" for="input01">Event name</label>
+        <label class="control-label" for="input01">Event Name</label>
         <div class="controls">
-          <input type="text" class="input-xlarge" id="input01" placeholder="Bar Camp">
-          <p class="help-block">Please create an event name</p>
+          <input type="text" class="input-xlarge" id="input_name" placeholder="Bar Camp">
+        </div>
+      </div>
+      <div class="control-group">
+        <label class="control-label" for="input01">Event Code</label>
+        <div class="controls">
+          <input type="text" class="input-xlarge" id="input_code" value="t3555">
         </div>
       </div>
       <div class="control-group">
         <label class="control-label" for="input01">Event URL</label>
         <div class="controls">
-          <input type="text" class="input-xlarge" id="input01">
-          <p class="help-block">Informational homepage for your event</p>
+          <input type="text" class="input-xlarge" id="input_url">
         </div>
       </div>
       <div class="control-group">
         <label class="control-label" for="input01">Event Date</label>
         <div class="controls">
-          <input type="text" class="input-xlarge" id="input01">
+          <input type="text" class="input-xlarge" id="input_date">
         </div>
         <label class="control-label" for="input01">Event Time</label>
         <div class="controls">
-          <input type="text" class="input-xlarge" id="input01">
+          <input type="text" class="input-xlarge" id="input_time">
           <select class="span1">
             <option>AM</option>
             <option>PM</option>
           </select>
-        </div>
-        <div>
-          <p class="help-block">The date/time when the speed networking will start</p>
         </div>
       </div>
     </div>
@@ -243,3 +244,16 @@
 </div>
 
 {% endblock body_content %}
+
+{% block additional_scripts %}
+  <script type="text/javascript">
+    $(document).ready(function () {
+        $('#input_name').tooltip({'trigger': 'focus', 'placement': 'right', 'title':'Create a name for the event'});
+        $('#input_code').tooltip({'trigger': 'focus', 'placement': 'right', 'title':'You can customize your event code'});
+        $('#input_url').tooltip({'trigger': 'focus', 'placement': 'right', 'title':'Homepage URL for your event'});
+        $('#input_date').tooltip({'trigger': 'focus', 'placement': 'right', 'title':'Date of your event'});
+        $('#input_time').tooltip({'trigger': 'focus', 'placement': 'right', 'title':'Start time of your networking event'});
+        });
+  </script>
+
+{% endblock additional_scripts %}
